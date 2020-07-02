@@ -1,0 +1,80 @@
+<html>
+<Head>
+<title> </title>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+<link rel="stylesheet" href="rating.css"/>
+<style>
+#a{
+padding-left:552px; 
+font-size:30px;
+}
+#p{
+padding-top:200px;}
+#2{
+padding-rightt:60px; 
+font-size:10px;
+}
+body{
+background-image:url('back.jpg');
+}
+#Av{
+	padding:0px 0px 0px 0px;
+}
+</style>
+
+
+</Head>
+<body>
+
+<div id="p">
+<h1 style="text-align:center;font-weight: 400;font-size: 70px;">RATE US HERE</h1>
+<fieldset id="a" class="rating">
+    <input type="radio" id="star5" name="rating" value="5"/><label class = "full" for="star5" title="outstanding - 5 stars"></label>
+  <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="excellent - 4.5 stars"></label>
+   <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="exceptionally good - 4 stars"></label>
+   <input type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="awesome - 3.5 stars"></label>
+   <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="pretty good - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="good - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="average - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="below average - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="bad - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="very bad - 0.5 stars"></label>
+</fieldset>
+<br/>
+<br/>
+<br>
+<p id="Av">Avg: <label id="AverageText"></label></p>
+<br>
+<input type="hidden" value="0" id="txtRate" name="txtRate" />
+<h1 id="2" style="text-align:center;font-weight: 400;font-size: 50px;"><input type="button" value="SUBMIT" onclick="getRate();"/></h1>
+</div>
+
+</body>
+<script>
+var ratinEls = document.getElementsByName('rating');
+
+function getRate(){
+    var ele = document.getElementsByName('rating');
+    var txtRate = document.getElementById('txtRate');
+    var Rate;
+    for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked){
+                  Rate = ele[i].value;
+				  Rate = parseFloat(Rate);
+				  var count = window.localStorage.getItem('count');	
+				  count = parseInt(count) || 0;
+				  var ratingAvg = window.localStorage.getItem('rating');
+				  ratingAvg = parseFloat(ratingAvg) || 0;
+				  var newAvg = ((ratingAvg * count) + Rate) / (count + 1);
+				  var newAvg1=newAvg.toFixed(1);
+				  window.localStorage.setItem('rating', newAvg1);
+				  window.localStorage.setItem('count',count +1);
+                }
+            } 
+  
+    alert("Submitted successfully");
+	
+	document.getElementById('AverageText').innerHTML =  window.localStorage.getItem('rating');
+}
+</script>
+</html>

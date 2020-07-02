@@ -1,0 +1,276 @@
+<style>
+
+		.t
+		{
+		width:100px;
+		margin-left:40px;
+		}
+
+		#p{
+		border:thin solid none;
+		padding:20px 20px 20px 30px;
+		}
+
+
+		#w{
+		width:18px; 
+		background-color:white; 
+		border:none;
+		}
+
+		option
+		{
+		background-color:#02a676;
+		}
+
+
+		th a:link,th a:visited
+		{
+		text-decoration:none;
+		color:black;
+		}
+
+		td {
+		    width: 46%;
+		    padding-top: 43px;
+		}
+		th a:hover,a:active
+		{
+
+		background-color:#02a676;
+		color:white;
+		}
+
+		#y{
+		border:solid thin white;
+		outline:solid thin white;
+		width:100%;
+		height:120px;
+		background:black url("background.png");
+		position:fixed;
+		top:0px;
+		}
+		th{
+		padding:75px 0px 0px 0px;
+		text-align:right;
+		}
+
+		.image
+		{
+		   width:100%;
+		   height:100%;
+		}
+
+
+
+
+	   .slider-holder
+		{
+		    width: 100%;
+		    height: 100%;
+		    background-color: yellow;
+		    margin-left: auto;
+		    margin-right: auto;
+		    margin-top: 0px;
+		    text-align: center;
+		    overflow: hidden;
+		}
+		
+		.image-holder
+		{
+		    width: 2400px;
+		    background-color: red;
+		    height: 400px;
+		    clear: both;
+		    position: relative;
+		    
+		    -webkit-transition: left 2s;
+		    -moz-transition: left 2s;
+		    -o-transition: left 2s;
+		    transition: left 2s;
+		}
+		
+		.slider-image
+		{
+		    float: left;
+		    margin: 0px;
+		    padding: 0px;
+		    border: 1px solid black;
+		    position: relative;
+		}
+		
+		#slider-image-1:target ~ .image-holder
+		{
+		    left: 0px;
+		}
+		
+		#slider-image-2:target ~ .image-holder
+		{
+		    left: -800px;
+		}
+		
+		#slider-image-3:target ~ .image-holder
+		{
+		    left: -1600px;
+		}
+		
+		.button-holder
+		{
+		    position: relative;
+		    top: -20px;
+		}
+		
+		.slider-change
+		{
+		    display: inline-block;
+		    height: 10px;
+		    width: 10px;
+		    border-radius: 5px;
+		    background-color: brown;
+		}
+		img.placesData1{
+	     		
+		      width: 30%;
+		   height: 300px;
+		 padding-left: 5%;
+		}
+
+		img.placesData2{
+	     		width: 30%;
+	    		height: 300px;	
+		        padding-left: 3%;
+		}
+		img.placesData3{
+	     		width: 30%;
+	    		height: 300px;	
+		        padding-left: 2%;
+		}
+		.placesRow2 {
+	 	   margin-top: 20px;
+		}
+		.places {
+	 	   padding-left: 39px;
+		}
+		.both {
+		    width: 100%;
+		}
+
+		.two_div {
+	    margin-top: 50px;
+		}
+		.paragraph{
+		  width:100%;
+		  text-align:justify;
+		  text-indent:60px;
+                  
+		 }
+	       .roundtitle {
+		color: #292c44 !important;
+		font-size: 18px;
+		font-weight: 900;
+		top: 20px;
+		position: relative;
+		text-align: justify;
+		 margin-top: 0;
+		margin-bottom: 20px;
+	     } 
+	  	
+
+
+	.shimla img {
+	    margin-right: 188px;
+	    margin-bottom: 35px;
+	}
+
+
+		html, body {
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  font-family: "Helvetica", sans-serif;
+	}
+
+	img {
+	  max-width: 100%;
+	}
+
+	.slider-container{
+	  height: 100%;
+	  width: 100%;
+	  position: relative;
+	  overflow: hidden; 
+	  text-align: center;
+	}
+
+	.menu {
+	  position: absolute;
+	  left: 0;
+	  z-index: 900;
+	  width: 100%;
+	  bottom: 0;
+	}
+
+	.menu label {
+	  cursor: pointer;
+	  display: inline-block;
+	  width: 16px;
+	  height: 16px;
+	  background: #fff;
+	  border-radius: 50px;
+	  margin: 0 .2em 1em;
+	  &:hover {
+	    background: red;
+	  }
+	}
+
+	.slide {
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  top: 0;
+	  left: 100%;
+	  z-index: 10;
+	  padding: 8em 1em 0;
+	  background-size: cover;
+	  background-position: 50% 50%;
+	  transition: left 0s .75s;
+	}
+
+	[id^="slide"]:checked + .slide {
+	  left: 0;
+	  z-index: 100;
+	  transition: left .65s ease-out;
+	}
+
+	.slide-1 {
+	  background-image: url("kasol.jpg");
+	}
+	.slide-2 {
+	  background-image: url("PrasharMandi.jpg");
+	}
+	.slide-3 {
+	  background-image: url("chailplacesolan.jpg");
+	}
+	.slider-container {
+	    margin-top: 118px;
+	    z-index: 0;
+	}
+	.ak1 {
+	    margin-top: 80px;
+	}
+	.ak {
+	    margin-left: 45px;
+	    /* margin-bottom: 45px; */
+	}
+	.ak47
+	{
+	margin-top:30px;
+	}
+#l a:link,a:hover{
+     background-color:white;
+}
+
+
+
+</style>
